@@ -1,0 +1,21 @@
+<div class="card-slide-container">
+
+  <div class="card-slide" *ngFor="let data of slides" id="slide-{{data.id}}">
+    <h1>
+      {{data.tittle}}
+    </h1>
+
+    <p *ngFor="let p of data.details"> 
+    {{p}}
+    </p>
+  </div>
+</div>
+
+<div class="slide-nav">
+    <div class="prev">
+        <button (click)="prevSlide()"><</button>
+      </div>
+      <div class="next">
+        <button (click)="nextSlide()">></button>
+      </div>
+</div>

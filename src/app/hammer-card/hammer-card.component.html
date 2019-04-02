@@ -1,0 +1,29 @@
+<!-- [@cardAnimator] is the animation trigger -->
+<!-- [@cardAnimator.done] is the event when animation is done -->
+<!-- swiperight - is hammer js events -->
+<div class="card" [@cardAnimator]="animationState" (@cardAnimator.done)="resetAnimation()"
+  (swipeleft)="strartAnimation('slideOutLeft')"
+  (swiperight)="strartAnimation('zoomOutRight')"
+  (swipeup)="strartAnimation('slideOutLeft')"
+  (swiperight)="strartAnimation('flipOutY')"
+    
+  >
+  <h1>
+    Card One
+  </h1>
+
+  <p>
+    Lorem ipsum dolor sit
+    amet consectetur adipisicing
+    elit. Non tenetur
+    temporibus in enim,
+    sunt exercitationem, eius
+    eveniet nulla, fugiat
+    est blanditiis dolore
+    itaque cupiditate
+    commodi illum aut
+    reiciendis dolor tempora.
+  </p>
+</div>
+
+<button (tap)="strartAnimation('wobble')">Start</button>
